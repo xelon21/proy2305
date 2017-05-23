@@ -9,5 +9,6 @@ $sql="INSERT INTO productos(nombre,totalusd,ano) values('$nom',$totusd,$ano)";
     
 $conn->objconn->query($sql);
 echo $sql;
+}
         
 ?>
