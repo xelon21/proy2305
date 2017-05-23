@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+session_start();
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-       <div>
+        <div>
         <div><?php if(isset($_SESSION['USR'])){ ?>
             <a href="cerrar.php">Cerrar sesion</a>
         <?php } ?>
@@ -21,7 +20,20 @@ and open the template in the editor.
             <div><label>Usuario</label><input type ="text" name ="nombre"</div>
             <div><label>Clave</label><input type ="password" name ="clave"</div>
             <input type ="submit" value="Acceder">
-        </form
+        </form>
+        <?php } ?>
+        <h1> Ejemplos de encriptacion con el HASH MD5 </h1>
+        <?php
+        echo '<br>';
+        echo md5('#holamundo&');
+        echo '<br>';
+        echo md5('holamundo');
+        echo '<br>';
+        echo md5('HoLaMundo');
+        echo '<br>';
+        echo md5('HOLAMundo');
+        echo '<br>';
+        ?>
     </body>
 </html>
 
