@@ -21,19 +21,8 @@ session_start();
             <div><label>Clave</label><input type ="password" name ="clave"</div>
             <input type ="submit" value="Acceder">
         </form>
-        <?php } ?>
-        <h1> Ejemplos de encriptacion con el HASH MD5 </h1>
-        <?php
-        echo '<br>';
-        echo md5('#holamundo&');
-        echo '<br>';
-        echo md5('holamundo');
-        echo '<br>';
-        echo md5('HoLaMundo');
-        echo '<br>';
-        echo md5('HOLAMundo');
-        echo '<br>';
-        ?>
+        
+        
     </body>
 </html>
 
