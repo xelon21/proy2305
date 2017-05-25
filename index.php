@@ -1,9 +1,7 @@
 <?php
-session_start();
+include("constantes.php");
+include("librerias.php");
 ?>
-
-
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -15,20 +13,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
-        <div><?php if(isset($_SESSION['USR'])) { ?>
-            <a href="cerrar.php">Cerrar Sesión</a>
-            <?php } ?>
-        </div>
-        <a href="revision.php">Inicio de sesi&oacute;n</a>
-        <a href="Formulario.php">Formulario Producto</a>
-        <?php if (!isset($_SESSION['USR'])){?>
-        <form action="revision.php" method="post">
-            <div><label>Usuario<input type="text" name="nombre"></div>
-            <div><label>Clave<input type="password" name="clave"></div>
-            <input type="submit" value="Acceder">
-        </form>
-        <?php }
-        ?>
+    <body>       
+        <a href="Formulario.php">agregarProducto</a>
+        <a href="cambiarclave.php">Cambiar clave de usuario</a>
+        
     </body>
 </html>
