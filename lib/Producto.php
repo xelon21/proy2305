@@ -1,14 +1,17 @@
 <?php
-include 'conexion.php';
-$conn=new Conexion;
-if($conn->conectar()){
-$nom=$_POST["nombre"];
-$totusd=$_POST["totalusd"];
-$ano=$_POST["ano"];
-$sql="INSERT INTO productos(nombre,totalusd,ano) values('$nom',$totusd,$ano)";
+class Producto {
+    var $nombre="";
+    var $precio=0;
+    public $codigo="";
     
-$conn->objconn->query($sql);
-echo $sql;
+    /*Constructor de la clase*/
+    
+    public function __construct1($nombre="", $precio=0, $codigo="") {
+        $this->nombre = $nombre;
+        $this->precio = $precio;
+        $this->codigo = $codigo;
+    }
+    public function totalUSD(){
+        return $this->precio/680;
+    }
 }
-        
-?>
